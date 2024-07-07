@@ -3,7 +3,7 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http, {
   cors: {
-    origin: 'https://video-chat-ui.onrender.com',
+    origin: process.env.VIDEO_CHAT_UI,
     methods: ["GET", "POST"],
   }
 });
