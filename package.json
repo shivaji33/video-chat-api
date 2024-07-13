@@ -1,11 +1,10 @@
 {
   "name": "video-chat-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "video-chat-api",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +12,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "peer": "^1.0.2",
     "socket.io": "^4.7.5"
   }
 }

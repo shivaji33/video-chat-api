@@ -3,12 +3,11 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http, {
   cors: {
-    origin: process.env.VIDEO_CHAT_UI,
+    origin: process.env.VIDEO_CHAT_UI || 'http://localhost:3000',
     methods: ["GET", "POST"],
   }
 });
 
-// const { ExpressPeerServer } = require('peer');
 
 
 const port = process.env.PORT || 4000;
@@ -18,12 +17,6 @@ app.get('/', (req, res) => {
     '<div><h1>Video chat server</h1><img src="https://th-i.thgim.com/public/migration_catalog/article10549698.ece/alternates/FREE_1200/HYF01MAYABAZAAR1" style="width: 90vw" /></div>'
   );
 });
-
-// const peerServer = ExpressPeerServer(http, {
-//   debug: true
-// });
-
-// app.use('/peerjs', peerServer); // PeerJS server
 
 
 
